@@ -1,4 +1,4 @@
-name: CI
+name: Ubuntu tmate
 on: [push]
 jobs:
   build:
