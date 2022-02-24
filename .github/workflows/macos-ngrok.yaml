@@ -1,0 +1,11 @@
+name: MacOS ngrok
+on: [push]
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Start SSH session
+        uses: luchihoratiu/debug-via-ssh@main
+        with:
+          NGROK_AUTH_TOKEN: ${{ secrets.NGROK_AUTH_TOKEN }}
+          SSH_PASS: ${{ secrets.SSH_PASS }}
